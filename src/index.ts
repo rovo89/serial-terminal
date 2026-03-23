@@ -22,7 +22,7 @@ import {
   Serial, SerialPort as SerialPortPolyfill,
 } from 'web-serial-polyfill';
 
-const polyfill = new Serial({});
+const polyfill = new Serial(navigator.usb);
 
 /**
  * Elements of the port selection dropdown extend HTMLOptionElement so that
