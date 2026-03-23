@@ -19,8 +19,10 @@ import {FitAddon} from 'xterm-addon-fit';
 import {WebLinksAddon} from 'xterm-addon-web-links';
 import 'xterm/css/xterm.css';
 import {
-  serial as polyfill, SerialPort as SerialPortPolyfill,
+  Serial, SerialPort as SerialPortPolyfill,
 } from 'web-serial-polyfill';
+
+const serial = new Serial();
 
 /**
  * Elements of the port selection dropdown extend HTMLOptionElement so that
