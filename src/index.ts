@@ -207,7 +207,10 @@ async function getSelectedPort(): Promise<void> {
   if (portSelector.value == 'prompt') {
     try {
       const serial = usePolyfill ? polyfill : navigator.serial;
-      port = await serial.requestPort({}, {usbControlInterfaceClass: 255, usbTransferInterfaceClass: 255});
+      port = await serial.requestPort({}, {
+        usbControlInterfaceClass: 255,
+        usbTransferInterfaceClass: 255,
+      });
     } catch (e) {
       return;
     }
