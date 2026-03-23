@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: 18
     - name: Install NPM packages
-      run: npm ci
+      run: npm i
     - name: Build
       run: npm run build
       env:
