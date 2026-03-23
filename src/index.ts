@@ -22,6 +22,7 @@ import {
   Serial, SerialPort as SerialPortPolyfill,
 } from 'web-serial-polyfill';
 
+// @ts-expect-error TS2339
 const polyfill = new Serial(navigator.usb);
 
 /**
